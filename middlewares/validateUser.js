@@ -2,7 +2,7 @@ import Joi from 'joi';
 
 const userCreateSchema = Joi.object({
   email: Joi.string().email().required(),
-  password: Joi.string().min(8).max(30),
+  password: Joi.string().min(8).max(30).required(),
 });
 
 export const validateCreateUser = async (req, res, next) => {

@@ -37,7 +37,7 @@ const login = async (req, res, next) => {
     if (!user) {
       return res.status(HttpCode.UNAUTHORIZED).json({
         status: 'error',
-        code: HttpCode.UNAUTHORIZED,
+        code: HttpCode.BAD_REQUEST,
         message: 'Invalid credentials',
       });
     }

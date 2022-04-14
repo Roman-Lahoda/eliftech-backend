@@ -13,7 +13,6 @@ app.use(helmet());
 app.use(cors());
 app.use(express.json({ limit: LIMIT_JSON }));
 
-
 app.use('/auth', routerUser);
 app.use('/bank', routerBank);
 
