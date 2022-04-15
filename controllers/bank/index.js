@@ -67,13 +67,13 @@ const deleteBank = async (req, res, _next) => {
 const listBank = async (req, res, _next) => {
   try {
     const { id: userId } = req.user;
-    const deletedBank = await Bank.find({
+    const listBank = await Bank.find({
       owner: userId,
     });
     return res.status(HttpCode.OK).json({
       status: 'success',
       code: HttpCode.OK,
-      data: deletedBank,
+      data: listBank,
     });
   } catch (err) {
     return res.status(HttpCode.INTERNAL_SERVER_ERROR).json({
