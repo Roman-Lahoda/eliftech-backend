@@ -14,6 +14,10 @@ const updateBankSchema = Joi.object({
   maximumLoan: Joi.number().positive().optional(),
   minimumDownPayment: Joi.number().positive().optional(),
   loanTerm: Joi.number().positive().optional(),
+  _id: Joi.string().optional(),
+  owner: Joi.string().optional(),
+  createdAt: Joi.string().optional(),
+  updatedAt: Joi.string().optional(),
 });
 
 export const validateCreateBank = async (req, res, next) => {
